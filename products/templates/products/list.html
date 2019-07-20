@@ -1,0 +1,10 @@
+<!-- {{object_list}} -->
+
+{% for obj in object_list %}
+
+{{ obj.title }} <br/>
+{{ obj.description }} <br />
+{% if obj.image %}
+<img src="{{obj.image.url}}" alt="" class="img-fluid" height="150px" width="150px">
+{% endif %} <br /><br/>
+{% endfor %}
