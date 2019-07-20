@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 
 from .views import (about_page, contact_page, home_page, login_page,
@@ -30,6 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login_page),
     path('register/', register_page),
+    path('products/', include('products.urls')),
+
 
 ]
 
